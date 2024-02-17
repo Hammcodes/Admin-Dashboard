@@ -4,9 +4,9 @@ body{
 }
 
 #container{
-    min-height: 100vh;
+    height: 100vh;
     display: grid;
-    grid-template: 1.2fr 5fr/ 1fr 4fr;
+    grid-template: 1fr 5fr/ 1fr 4fr;
 }
 
 #sidebar{
@@ -15,25 +15,31 @@ body{
     background-color: rgb(25,146,212);
     display: grid;
     grid-template-rows: 1fr 4fr 3fr;
-
+    padding-top: 5px;
+    gap: 10px;
 }
 
 #dashboard{
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #ffffff;
     display: flex;
     align-items: center;
-    padding-left: 2rem;
+    padding-left: 1.8rem;
+    gap: 5px;
 }
 
 #dash-icon{
-    width: 2rem;
+    width: 1.8rem;
     filter: invert(100%);
 }
 
 #icon{
-    width: 1.8rem;
-    filter: invert(100%);
+    width: 1.1rem;
+}
+
+.nav-item>#icon,
+.preferences-item>#icon {
+    filter: invert(100%)
 }
 
 li{
@@ -43,13 +49,13 @@ li{
 a{
     text-decoration: none;
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
 }
 
 .nav-item,
 .preferences-item{
     display: flex;
-    padding: 6px 0;
+    padding: 5px 0;
     gap: 10px;
     align-items: center;
 }
@@ -58,6 +64,47 @@ a{
     grid-row: 1/2;
     grid-column: 2/3;
     background-color: rgb(255,255,255);
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 5px;
+}
+
+#header-one{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+
+[type=search]{
+    background-color: rgb(226,232,240);
+    border: none;
+    border-radius: 10px;
+    width: 80%;
+}
+
+#profile-picture{
+    width: 1.6rem;
+}
+
+#header-two{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+}
+
+#greeting{
+    display: flex;
+    align-items: center;
+}
+#greeting-picture{
+    width: 2rem;
+}
+
+button{
+    background-color: rgb(25,146,212);
+    color: white;
+    border-radius: 10px;
 }
 
 #main{
